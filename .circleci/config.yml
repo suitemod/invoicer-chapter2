@@ -32,6 +32,8 @@ jobs:
       command: |
           go test \
           github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
+    - store_test_results:
+    path: test-results
 
 #   - deploy:
 #       command: |
