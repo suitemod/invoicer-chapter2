@@ -1,6 +1,6 @@
 FROM busybox:latest
-RUN addgroup --gid 10001 app
-RUN adduser --uid app 10001 \
+RUN addgroup -g 10001 app && \
+    adduser -G app -u 10001 \
     --home /app --shell /sbin/nologin \
     --disabled-password app
 
